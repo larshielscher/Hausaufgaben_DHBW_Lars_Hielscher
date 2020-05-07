@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-main(){
+int main(){
     double y, result;
     int i = 0;
     int maxiteraitons = 100;
