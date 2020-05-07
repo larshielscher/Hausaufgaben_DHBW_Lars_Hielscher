@@ -10,7 +10,8 @@ main(){
     double* arrayresult;
     arrayy = (double*)malloc(sizeof(double)*maxiteraitons);
     arrayresult = (double*)malloc(sizeof(double)*maxiteraitons);
-    y,result = 5;
+    result = 5;
+    y = result;
     
     while (result > 0.0001 || result < -0.0001 || i < maxiteraitons){
         y = y-((pow((y-3),3)-3)/(3*pow((y-3),2)));
