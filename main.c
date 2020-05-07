@@ -1,27 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-int main() {
-
-    int lenx = 5;
-    int leny = 4;
-
-    int arr[4][5];
-
-    int **mat = malloc(sizeof(int) * lenx);
-
-    for (int i = 0; i < lenx; i++) {
-        mat[i] = malloc(sizeof(int) * leny);
-    }      
-
-    printf("Value of vec: \n");
-    for (int x = 0; x < lenx; x++) {
+main(){
+    double y, result;
+    int i = 0;
+    int maxiteraitons = 100;
+    double* arrayy;
+    double* arrayresult;
+    arrayy = (double*)malloc(sizeof(double)*maxiteraitons);
+    arrayresult = (double*)malloc(sizeof(double)*maxiteraitons);
+    y,result = 5;
+    
+    while (result > 0.0001 || result < -0.0001 || i < maxiteraitons){
+        y = y-((pow((y-3),3)-3)/(3*pow((y-3),2)));
+        arrayy[i] = y;
+        result = pow((y-3),3)-3;
+        arrayresult[i] = result;
+        i++;
         
-        for (int y = 0; y < leny; y++) {
-            printf("%d ",mat[y][x]);
-        }
-        printf("\n");
-
+        
     }
+    printf("Die Nullstelle ist bei x = %f",y);
+    
+    
     return 0;
-    }
+}
