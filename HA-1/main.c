@@ -19,7 +19,7 @@ int main(){
         result = pow((y-3),3)-3;
         arrayresult[i] = result;
         i++;
-        
+        printf("%d\n",i);
         
     }
     printf("Die Nullstelle ist bei x = %f",y);
@@ -27,3 +27,11 @@ int main(){
     
     return 0;
 }
+
+/*
+JW-2020-05-12:
+--------------
+> good implementation! (8/10) 
+> missing extra lib (*.c + *.h) incl. includegard includeguards: -1 Pkt
+> while loop will always run till maxiterations as you used logical or's: -1Pkt
+*/
