@@ -75,15 +75,17 @@ int main(){
         zahl[0].b = resultb;
         printf("Hier ist dein Ergebniss: %.2lf + %.2lfi\n",zahl[0].a,zahl[0].b);
     }
-    else
-    {
-        printf("Ungueltige Eingabe, bitte wähle aus einer der vier oben genannten Moeglichkeiten.\n(Du musst ihre jeweilige Nummer eintippen)\n");
+    else{
+        printf("Ungueltige Eingabe, bitte waehle aus einer der vier oben genannten Moeglichkeiten.\n(Du musst ihre jeweilige Nummer eintippen)\n");
     }
     
-
-
-
-
-
-
+    return 0;
 }
+/*
+JW-2020-06-18:
+--------------
+> good implementation! (7/10) 
+> struct is not in header file: -1Pkt
+> no string implementation: -3Pkt
+> nice use of array of structs: +1Pkt 
+*/
