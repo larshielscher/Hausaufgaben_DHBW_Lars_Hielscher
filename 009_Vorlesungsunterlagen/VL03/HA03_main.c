@@ -51,7 +51,7 @@ int main(){
 		printf("7... sort list\n");
         printf("0... quit\n");
         scanf("%d",&FLAGG);
-        system("clear"); // cls for windows
+        system("cls"); // cls for windows
 
 
         switch (FLAGG){
