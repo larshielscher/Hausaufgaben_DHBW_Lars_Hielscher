@@ -236,7 +236,7 @@ void sortList(listElement *start){
                         strcpy(temp1,currElem->lastName);    
                         strcpy(temp2,(currElem->nextElem)->lastName);                        
                                                 
-                        temp1ptr = temp1;                        
+                        temp1ptr = temp1;                      
                         temp2ptr = temp2;
 
                         stringToLower(temp1ptr);
@@ -303,7 +303,12 @@ void stringToLower(char *string) {
 	}
     printf("\n\n");
 }
-
+/*
+JW-2020-05-29:
+--------------
+> well done (9/10) 
+> why did you introduce temp1ptr & temp1ptr? why not passing temp1 & temp2 directly to stringToLower. -1Pkt
+*/
 
 
 
