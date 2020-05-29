@@ -138,7 +138,7 @@ void saveList(listElement *start)
         printf("could not open file");
         return;
     }
-    else
+    else // JW 2020-05-22: you can use the else statement you but dont need to in this code.
     {
 
         fprintf(fPtr, "%d\n", (int)getLenOfList(start));
@@ -163,7 +163,7 @@ void loadList(listElement *start)
     char filename[50];
     printf("\nloading data...\n\n");
     printf("availible data: \n----------------\n");
-    system("dir /b *.txt"); // dir /b *.txt for windows | print availible *.txt files in current location
+    system("ls /b *.txt"); // dir /b *.txt for windows | print availible *.txt files in current location
     printf("\nfilname without extension: ");
     scanf("%s", filename);
     strcat(filename, ".txt"); // adding .txt to file name
@@ -228,3 +228,9 @@ void stringToLower(char *string)
 
     printf("\n>>stringToLower fcn is tbd.\n\n");
 }
+/*
+JW-2020-05-22:
+--------------
+> well done (10/10) 
+> how much time did you spend on this exercise? I think it was a litte to easy wasnt it?
+*/
