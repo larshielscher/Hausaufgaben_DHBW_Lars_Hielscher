@@ -36,7 +36,7 @@ void printList(listElement *start)
         printf("\n>> list is empty\n\n");
     else
     {
-        int i = 0;
+        int i = 1;
         listElement *currElem = start;
         printf("\n>> current list:\n\n");
         do
@@ -54,14 +54,57 @@ void printList(listElement *start)
 
 void delListElem(listElement *start)
 {
+    
+    int deleteElem;
 
-    printf("\n>> delListElem fcn is tbd.\n\n");
+    printList(start);
+    printf("Wich list elment do you want to delete?\n");
+    scanf("%d",&deleteElem);
+
+    if (getLenOfList(start) < deleteElem){
+        printf("can´t delete element with index %d list index ends at %d\n", deleteElem, getLenOfList(start));
+    }else {
+        printf("List element %d is getting deleted\n",deleteElem);
+    
+        
+    listElement *currElem = start;
+    listElement *deletePtr;
+
+    for (int i = 1; i < deleteElem; i++)
+    {
+        currElem = currElem->nextElem;
+    } 
+
+    deletePtr = currElem->nextElem;
+    currElem->nextElem = (currElem->nextElem)->nextElem;
+    free(deletePtr);
+
+    }
+    
 }
 
 void delList(listElement *start)
 {
+    if (start->nextElem == NULL){
 
-    printf("\n>> getLenOfList fcn is tbd.\n\n");
+        printf("List is empty\n");
+
+    } else {        
+
+    listElement *currElem = start;
+    listElement *deletePtr;
+
+    while (currElem->nextElem != NULL)
+    {
+        deletePtr = currElem->nextElem;
+        currElem->nextElem = (currElem->nextElem)->nextElem;
+        free(deletePtr);
+    } 
+
+    printf("\n\nThe list is now deleted\n\n");
+    
+    }
+    
 }
 
 int getLenOfList(listElement *start)
@@ -163,7 +206,15 @@ void loadList(listElement *start)
 void exitFcn(listElement *start)
 {
 
-    printf("\n>> exitFcn fcn is tbd.\n\n");
+    int saveFlagg = 0;
+
+    printf("do you want to save the current list?\n");
+    printf("[1] ... yes\n");
+    printf("[0] ... no\n");
+    scanf("%d",&saveFlagg);
+
+    if (saveFlagg == 1) saveList(start);
+    system("cls");
 }
 
 void sortList(listElement *start)
