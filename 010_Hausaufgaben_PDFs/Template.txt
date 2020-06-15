@@ -5,18 +5,22 @@ Template zur Hausaufgabe 06
  Multiple Choice:
  Bitte nach dem jeweiligen Buchstaben die Nummer als Antwort eintragen.
 ------------------------------------------------------------------------
-a)
-b)
-c)
-d)
-e)
-f)
+a)2
+b)3
+c)3
+d)3
+e)3
+f)2
 -------------------------------------------------------------
  Basics:
  Bitte nach dem jeweiligen Buchstaben die Antwort eintragen.
 -------------------------------------------------------------
-g)
+g) 	int i = 533;
+	while (i > -12){
+		printf ("\%d \textbackslash n" , i );
+		i -= 7;	
+	}
 
 
 
-h)
+h)	arr[5] = {1, 0, 5,7 9};
